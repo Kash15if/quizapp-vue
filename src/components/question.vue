@@ -29,7 +29,7 @@
 
     <button type="button" @click="submitNext" >Save and Next</button> 
    
-    <p style="color:red; text-align:center;font-weight:bold" v-if="end">Can't skip , Quiz contains only 5 questions</p>
+    <p style="color:red; text-align:center;font-weight:bold" v-if="last">Can't skip , Quiz contains only {{qNo}} questions</p>
 
 </div>
 
@@ -138,6 +138,7 @@ qAns: "Not answered",
 Ans: [],
 rightAns: [],
 end: false ,
+last: false,
 marks: 0
       }
   },
@@ -147,14 +148,14 @@ marks: 0
       skip(){
            
 
-          if(!this.end){
+          if(!this.last){
           this.Ans.push(this.qAns);
           this.qNo++;
           this.qAns = "Not answered";  
           }
 
-          if(this.qNo > 5)
-            this.end = true;
+          if(this.qNo >= 5)
+            this.last = true;
           
       },
 
