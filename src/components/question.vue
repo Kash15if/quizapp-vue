@@ -43,13 +43,15 @@
         <th>Right answer</th>
         <th>Your answer</th>
     </tr>
-    <tr v-for="answer in Ans" :key="answer">
-        <td>{{ }}</td>
-        <td>{{ rightAns[i] }}</td>
+    <tr v-for="(answer , index) in rightAns" :key="index">
+        <td>{{ index+1 }}</td>
+        <td>{{ Ans[index] }}</td>
         <td>{{answer}}</td>
     </tr>
     
     </table>
+
+    <button type="button" class="btnDn" style="margin-top:5%">Get Question paper on Email</button>
 
 </div>
 
@@ -81,60 +83,60 @@ export default {
     [
         "1",
         "",
-        "A student measured the length of a rod and wrote it as 3.50 cm. Which instrument did he use to measure it?",
-        "Aaaaa lelleeeeee eeeeeeeee eeeeee eeeeeeeeeeeeeeeeee",
-        "B",
-        "C",
-        "D",
-        "C"
+        "A can do a work in 15 days and B in 20 days. If they work on it together for 4 days, then the fraction of the work that is left is :",
+        "1/4",
+        "1/10",
+        "7/15",
+        "8/15",
+        "D"
       ],
       [
         "2",
         "",
-        "[qrdd         ",
-        "pagal diwana",
-        "B",
-        "C",
-        "D",
-        "D"
+        "A can lay railway track between two given stations in 16 days and B can do the same job in 12 days. With help of C, they did the job in 4 days only. Then, C alone can do the job in:",
+        "46/5",
+        "47/5",
+        "48/5",
+        "10",
+        "C"
       ],
       [
         "3",
         "",
-        "A student measured the length of a rod and wrote it as 3.50 cm. Which instrument did he use to measure it?",
-        "kaise bahana",
-        "B",
-        "C",
-        "D",
-        "A"
+        "A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day?",
+        "16 days",
+        "12 days",
+        "15 days",
+        "18 days",
+        "C"
       ],
       [
         "4",
         "",
-        "A student measured the length of a rod and wrote it as 3.50 cm. Which instrument did he use to measure it?",
-        "A",
-        "B",
-        "C",
-        "D",
-        "A"
+        "A is thrice as good as workman as B and therefore is able to finish a job in 60 days less than B. Working together, they can do it in:",
+        "20 days",
+        "45/2 days",
+        "25 days",
+        "30 days",
+        "B"
       ],
       [
         "5",
         "",
-        "A student measured the length of a rod and wrote it as 3.50 cm. Which instrument did he use to measure it?",
-        "A",
-        "B",
-        "C",
-        "D",
+        "A alone can do a piece of work in 6 days and B alone in 8 days. A and B undertook to do it for Rs. 3200. With the help of C, they completed the work in 3 days. How much is to be paid to C?",
+        "Rs 400",
+        "Rs 375",
+        "Rs 600",
+        "Rs 800",
         "A"
       ]
 
 ],
 
-qNo: "",
-qAns: "",
+qNo: 1,
+qAns: "Not answered",
 Ans: [],
-rightAns: ["A","B","C","D","A"],
+rightAns: [],
 end: false ,
 marks: 0
       }
@@ -143,36 +145,36 @@ marks: 0
   methods:{
 
       skip(){
-          if(this.qNo >= 5)
-            this.end = true; 
+           
 
           if(!this.end){
           this.Ans.push(this.qAns);
           this.qNo++;
-          this.qAns = "";  
+          this.qAns = "Not answered";  
           }
+
+          if(this.qNo > 5)
+            this.end = true;
           
       },
 
       submitNext(){   
-          if(this.qNo >= 5)
-            this.end = true; 
-
-          if(this.end){
+           
+          if(this.qNo <= 5){
+          this.Ans.push(this.qAns);
+          this.qNo++;
+          this.qAns = "Not answered";
+          }
+          
+          if(this.qNo > 5){
+            this.end = true;
             for(let i = 1 ; i <= 5 ; i++){
                 if(this.Ans[i-1] == this.rightAns[i-1]){
                     this.marks++;
                 }
+                
             }
-            console.log(this.marks);
-            console.log(this.Ans);
-            console.log(this.rightAns);
-          }
-          else{
-          this.Ans.push(this.qAns);
-          this.qNo++;
-          this.qAns = "";
-          }
+            }
       }
 
 
@@ -180,7 +182,15 @@ marks: 0
 
   created(){
 
-      this.qNo = 1;
+
+      let j = 0;
+      this.Quest.forEach(element => {
+          if(j >0)
+            this.rightAns.push(element[7]);
+          else
+            j++;
+      });
+
   }
 }
 </script>
@@ -193,10 +203,24 @@ marks: 0
     text-align: center;
 }
 
-table{
-    width: 60%;
-    margin-top: 5%;
-    margin-left: 20%;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 5%;
+  margin-left: 0%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+.btnDn{
+    padding: 15px;
+    background-color: #1abc9c;
 }
 
 .Box{
@@ -251,11 +275,16 @@ table{
         @media(min-width: 768px){
             .Box {
             margin: 10vh 15vw 0 15vw;
-        }
+            }
 
         .Box button {
             font-size: 2vw;
-        }
+            }
+
+        table {
+                width: 70%;
+                margin-left: 15%;
+            }
 
    
         }
