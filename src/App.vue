@@ -1,18 +1,18 @@
 <template>
   <div id="app">
 
-    <Dashboard/>
+    <Quizpage/>
     
   </div>
 </template>
 
 <script>
-import Dashboard from './components/dash-board.vue'
+import Quizpage from './components/quiz-page.vue'
 
 export default {
   name: 'App',
   components: {
-    Dashboard
+    Quizpage
   }
 }
 </script>
