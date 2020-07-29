@@ -17,7 +17,7 @@ export default {
 
   data(){
     return{
-      time : "00:30:00",
+      time : "00:01:00",
       timeout : false
 
     }
@@ -31,7 +31,7 @@ export default {
 
   showtimer: function(){
       
-    const timer = setInterval(()=>{
+    const timer =  setInterval(()=>{
         
         let time = this.time;
         let t = time.split(":")
@@ -106,7 +106,7 @@ h3{
         /* mediA query*/
         @media(min-width: 768px){
           h3{
-            margin-left: 19%;
+            margin-left: 4%;
             margin-right: 0;
         }
         }
