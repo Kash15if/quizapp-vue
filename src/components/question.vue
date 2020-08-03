@@ -2,7 +2,7 @@
 
 <div class="Box">
     
-    <Timer/>
+    <Timer v-on:timeEnd="timeEnd()"></Timer>
 
     <div>
         <button type="button" class="skipBtn" @click="skip" >Skip<span class="material-icons">skip_next</span></button>
@@ -70,6 +70,10 @@ export default {
       async submit(){
             await this.$emit('submit' , this.qAns);
             this.qAns = "Not Answered"
+      },
+
+      timeEnd(){
+          this.$emit('timeEnds')
       }
 
   },

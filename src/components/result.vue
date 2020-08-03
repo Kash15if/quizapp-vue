@@ -17,7 +17,8 @@
     
     </table>
 
-    <button type="button" class="btnDn" style="margin-top:5%">Get Question paper on Email</button>
+    <button type="button" class="btnDn" >Get Question paper on Email</button>
+    <button type="button" class="btnDn"><a href="https://github.com/Kash15if/quizapp-vue">Code on github</a></button>
 
 </div>
 </template>
@@ -67,6 +68,8 @@ td, th {
 .btnDn{
     padding: 15px;
     background-color: #1abc9c;
+    margin:3% 35% 0 35%;
+    width: 30%;
 }
 
 
@@ -76,6 +79,12 @@ td, th {
                 width: 70%;
                 margin-left: 15%;
             }
+        .btnDn{
+                padding: 15px;
+                background-color: #1abc9c;
+                margin:3% 35% 0 35%;
+                width: 30%;
+              }
         }
 
         

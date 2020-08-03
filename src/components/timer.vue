@@ -73,6 +73,7 @@ export default {
         if(this.timeout){
             time = "time Out";
             clearInterval(timer);
+            this.$emit('timeEnd');
         }
         
 

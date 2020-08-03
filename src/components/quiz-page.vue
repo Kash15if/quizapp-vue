@@ -1,7 +1,7 @@
 <template>
 <div>
 
-<Questions v-if="!end" :qNo="qNo" :Quest="Quest" :last="last" v-on:submit="submitNext($event)" v-on:skip="skipNext($event)"></Questions>
+<Questions v-if="!end" :qNo="qNo" :Quest="Quest" :last="last" v-on:submit="submitNext($event)" v-on:skip="skipNext($event)" v-on:timeEnds="timeExceed()"></Questions>
 <Result v-else :marks="marks" :rightAns="rightAns" :Ans="Ans"></Result>
 
 </div>
@@ -16,7 +16,7 @@ import Result from './result.vue'
 
 
 export default {
-  name: 'Dashboard',
+  name: 'Quiz-page',
   props: {
   },
   components:{
@@ -61,6 +61,22 @@ marks: 0
                     this.marks++;
                 }  
             }
+            }
+      },
+
+      timeExceed(){
+        this.end = true;
+        this.Ans[this.qNo - 1 ] = "Not Answered";
+        this.qNo++;
+
+        while(this.qNo <= 5){
+          this.Ans[this.qNo - 1 ] = "Unseen";
+          this.qNo++;
+        }
+            for(let i = 1 ; i <= 5 ; i++){
+                if(this.Ans[i-1] == this.rightAns[i-1]){
+                    this.marks++;
+                }  
             }
       }
 
