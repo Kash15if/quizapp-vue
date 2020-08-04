@@ -88,7 +88,7 @@ export default {
 
 
 .Box{
-            margin-top: 3vh; 
+            margin-top: 1.5vh; 
             border: 2px solid #3D9970; 
             border-radius: 15px;
             height: auto;

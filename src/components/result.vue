@@ -6,8 +6,8 @@
     <table>
     <tr>
         <th>Q.No</th>
-        <th>Right answer</th>
         <th>Your answer</th>
+        <th>Right answer</th>
     </tr>
     <tr v-for="(answer , index) in rightAns" :key="index">
         <td>{{ index+1 }}</td>
@@ -17,8 +17,10 @@
     
     </table>
 
-    <button type="button" class="btnDn" >Get Question paper on Email</button>
+    
     <button type="button" class="btnDn"><a href="https://github.com/Kash15if/quizapp-vue">Code on github</a></button>
+    <button type="button" class="btnDn"><a href="https://github.com/Kash15if/quizapp-vue">Get Question paper on Email</a></button>
+    <button type="button" class="btnDn" @click="nextLevel">Next Level</button>
 
 </div>
 </template>
@@ -39,6 +41,11 @@ export default {
       }
 
   },
+  methods:{
+      nextLevel(){
+          this.$emit('nextLevel');
+      }
+  }
 }
 </script>
 
@@ -46,7 +53,7 @@ export default {
 <style>
 
 .results{
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -67,9 +74,9 @@ td, th {
 
 .btnDn{
     padding: 15px;
-    background-color: #1abc9c;
-    margin:3% 35% 0 35%;
-    width: 30%;
+    background-color: #4CAF50;
+    margin:5% 15% 0 15%;
+    width: 70%;
 }
 
 
@@ -79,11 +86,9 @@ td, th {
                 width: 70%;
                 margin-left: 15%;
             }
-        .btnDn{
-                padding: 15px;
-                background-color: #1abc9c;
-                margin:3% 35% 0 35%;
-                width: 30%;
+        .btnDn{      
+                margin: 5% 5% 0 5%;
+                width: 22%;
               }
         }
 

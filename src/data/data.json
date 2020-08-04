@@ -1,64 +1,134 @@
 [
-        [
-          "Q.No",
-          "Q.Status",
-          "Question",
-          "Opt1",
-          "Opt2",
-          "Opt3",
-          "Opt4",
-          "Ans"
-        ],
-        [
-            "1",
-            "",
-            "A can do a work in 15 days and B in 20 days. If they work on it together for 4 days, then the fraction of the work that is left is :",
-            "1/4",
-            "1/10",
-            "7/15",
-            "8/15",
-            "D"
-          ],
-          [
-            "2",
-            "",
-            "A can lay railway track between two given stations in 16 days and B can do the same job in 12 days. With help of C, they did the job in 4 days only. Then, C alone can do the job in:",
-            "46/5",
-            "47/5",
-            "48/5",
-            "10",
-            "C"
-          ],
-          [
-            "3",
-            "",
-            "A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day?",
-            "16 days",
-            "12 days",
-            "15 days",
-            "18 days",
-            "C"
-          ],
-          [
-            "4",
-            "",
-            "A is thrice as good as workman as B and therefore is able to finish a job in 60 days less than B. Working together, they can do it in:",
-            "20 days",
-            "45/2 days",
-            "25 days",
-            "30 days",
-            "B"
-          ],
-          [
-            "5",
-            "",
-            "A alone can do a piece of work in 6 days and B alone in 8 days. A and B undertook to do it for Rs. 3200. With the help of C, they completed the work in 3 days. How much is to be paid to C?",
-            "Rs 400",
-            "Rs 375",
-            "Rs 600",
-            "Rs 800",
-            "A"
-          ]
+
+
+  [
+
+    [
+      "Q.No",
+      "Q.Status",
+      "Question",
+      "Opt1",
+      "Opt2",
+      "Opt3",
+      "Opt4",
+      "Ans"
+    ],
+    [
+        "1",
+        "",
+        "A can do a work in 15 days and B in 20 days. If they work on it together for 4 days, then the fraction of the work that is left is :",
+        "1/4",
+        "1/10",
+        "7/15",
+        "8/15",
+        "D"
+      ],
+      [
+        "2",
+        "",
+        "A can lay railway track between two given stations in 16 days and B can do the same job in 12 days. With help of C, they did the job in 4 days only. Then, C alone can do the job in:",
+        "46/5",
+        "47/5",
+        "48/5",
+        "10",
+        "C"
+      ],
+      [
+        "3",
+        "",
+        "A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day?",
+        "16 days",
+        "12 days",
+        "15 days",
+        "18 days",
+        "C"
+      ],
+      [
+        "4",
+        "",
+        "A is thrice as good as workman as B and therefore is able to finish a job in 60 days less than B. Working together, they can do it in:",
+        "20 days",
+        "45/2 days",
+        "25 days",
+        "30 days",
+        "B"
+      ],
+      [
+        "5",
+        "",
+        "A alone can do a piece of work in 6 days and B alone in 8 days. A and B undertook to do it for Rs. 3200. With the help of C, they completed the work in 3 days. How much is to be paid to C?",
+        "Rs 400",
+        "Rs 375",
+        "Rs 600",
+        "Rs 800",
+        "A"
+      ]
+  ],
+
+  [
+    [
+      "Q.No",
+      "Q.Status",
+      "Question",
+      "Opt1",
+      "Opt2",
+      "Opt3",
+      "Opt4",
+      "Ans"
+    ],
+    [
+        "1",
+        "",
+        "A can do a work in 15 days and B in 20 days. If they work on it together for 4 days, then the fraction of the work that is left is :",
+        "1",
+        "1",
+        "7",
+        "8",
+        "D"
+      ],
+      [
+        "2",
+        "",
+        "A can lay railway track between two given stations in 16 days and B can do the same job in 12 days. With help of C, they did the job in 4 days only. Then, C alone can do the job in:",
+        "46",
+        "47",
+        "48",
+        "1",
+        "C"
+      ],
+      [
+        "3",
+        "",
+        "A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day?",
+        "16",
+        "12",
+        "15",
+        "18",
+        "C"
+      ],
+      [
+        "4",
+        "",
+        "A is thrice as good as workman as B and therefore is able to finish a job in 60 days less than B. Working together, they can do it in:",
+        "20",
+        "45",
+        "25",
+        "30",
+        "B"
+      ],
+      [
+        "5",
+        "",
+        "A alone can do a piece of work in 6 days and B alone in 8 days. A and B undertook to do it for Rs. 3200. With the help of C, they completed the work in 3 days. How much is to be paid to C?",
+        "Rs",
+        "Rs",
+        "Rs",
+        "Rs",
+        "A"
+      ]
+  ]
+
+        
     
   ]
     
