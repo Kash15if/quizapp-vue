@@ -17,10 +17,12 @@
     
     </table>
 
-    
+
+    <h3 v-if="warning">{{warning}}</h3>
     <button type="button" class="btnDn"><a href="https://github.com/Kash15if/quizapp-vue">Code on github</a></button>
     <button type="button" class="btnDn"><a href="https://github.com/Kash15if/quizapp-vue">Get Question paper on Email</a></button>
     <button type="button" class="btnDn" @click="nextLevel">Next Level</button>
+    
 
 </div>
 </template>
@@ -38,6 +40,9 @@ export default {
       },
       Ans:{
           type: Array
+      },
+      warning:{
+          type: String
       }
 
   },
@@ -50,7 +55,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 
 .results{
     margin-top: 5%;
@@ -77,6 +82,11 @@ td, th {
     background-color: #4CAF50;
     margin:5% 15% 0 15%;
     width: 70%;
+}
+
+h3{
+    color: rgb(255, 0, 0);
+    font-weight: bold;
 }
 
 

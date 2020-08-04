@@ -2,7 +2,7 @@
 <div>
 <div><h1 style="text-align:center;">Level {{level}}</h1></div>
 <Questions v-if="!end" :qNo="qNo" :Quest="Quest" :last="last" v-on:submit="submitNext($event)" v-on:skip="skipNext($event)" v-on:timeEnds="timeExceed()"></Questions>
-<Result v-else :marks="marks" :rightAns="rightAns" :Ans="Ans" v-on:nextLevel="nextLevel"></Result>
+<Result v-else :marks="marks" :rightAns="rightAns" :Ans="Ans" v-on:nextLevel="nextLevel" :warning="warning"></Result>
 
 </div>
 
@@ -33,7 +33,8 @@ Ans: [],
 rightAns: [],
 end: false ,
 last: false,
-marks: 0
+marks: 0,
+warning: '',
       }
   },
 
@@ -102,6 +103,10 @@ marks: 0
             k++;
         });
         }
+        else{
+          this.warning = "Only 5 levels available"
+        }
+          
         
       }
 
