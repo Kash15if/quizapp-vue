@@ -83,7 +83,7 @@ warning: '',
       },
 
       async nextLevel(){
-        if(this.level < 2){
+        if(this.level < 3){
         this.last = false;
         this.end = false;
         this.qNo = 1;
@@ -104,7 +104,7 @@ warning: '',
         });
         }
         else{
-          this.warning = "Only 5 levels available"
+          this.warning = "Only 3 levels available"
         }
           
         
