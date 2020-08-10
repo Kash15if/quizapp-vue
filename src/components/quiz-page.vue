@@ -93,7 +93,6 @@ warning: '',
         this.level++;
         var data = await require("../data/data.json");
         this.Quest = await data[this.level - 1];
-        console.log(this.Quest);
 
         let k = 0;
         await this.Quest.forEach(element => {
